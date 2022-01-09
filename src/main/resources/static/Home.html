@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="body"></div>
+	<article>
+		<header>			   
+			<h1>A heading here</h1>			
+		</header>
+		<p>Lorem Ipsum dolor set amet....</p>
+	</article>
+	<div id="myDiv"></div>
+</body>
+<script>
+	$.get("/Hello", function(data, status) {
+		//alert("Data: " + data + "\nStatus: " + status);
+		$("#myDiv").text(data);
+	});
+	$(document).ready(function () {
+	    //adds menu.html content into any "#menu" element
+	    $('#body').load('Header.html');
+	});
+</script>
+</html>
